@@ -1,0 +1,25 @@
+html,*,body {
+    //background:#ccc;
+}
+
+body {background:#ccc;}
+
+.tasks {
+    background:#fff;
+}
+
+
+.board {
+    .container-fluid {
+        background:#fff;
+    }
+    .todo-body {
+        min-height:60px;
+    }
+    span.alert {
+        margin:0;
+        padding:0;
+        color:red;
+        font-weight: 800;
+    }
+}
