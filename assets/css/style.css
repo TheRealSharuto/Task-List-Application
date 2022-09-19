@@ -1,0 +1,21 @@
+body {
+    background-color: #eeefee;
+}
+
+.card {
+    position: relative;
+    top: 10px;
+    margin: auto;
+    width: 70%;
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+.btn.btn-primary {
+    background-color: #0361CC;
+    float: right;
+    border-radius: 15px;
+    padding: 5px 20px;
+}
