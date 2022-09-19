@@ -1,8 +1,15 @@
-html,*,body {
-    //background:#ccc;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,900&family=Work+Sans:wght@100&display=swap');
 
-body {background:#ccc;}
+$pop: 'Poppins', sans-serif;
+$robot: 'Roboto', sans-serif;
+
+h1,h4 {font-family: $robot;}
+h1,h4 {font-weight: 800;}
+
+body {
+    background:#ccc;
+    font-family: $pop;
+}
 
 .tasks {
     background:#fff;
@@ -15,6 +22,7 @@ body {background:#ccc;}
     }
     .todo-body {
         min-height:60px;
+        word-wrap:break-word;
     }
     span.alert {
         margin:0;
@@ -22,4 +30,25 @@ body {background:#ccc;}
         color:red;
         font-weight: 800;
     }
+}
+.reset-btn {
+    background:red;
+}
+textarea {resize:none;}
+
+.flatpickr {
+    position:relative;
+    i {
+        position: absolute;
+        right:.5rem;
+        top: 4px;
+        font-size: 30px;
+        color:blue;
+    }
+}
+.assignedPlaceholder {
+    margin-top:.5rem;
+}
+.duedatePlaceholder {
+    margin-bottom:.5rem;
 }
