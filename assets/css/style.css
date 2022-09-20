@@ -2,13 +2,6 @@ body {
     background-color: #eeefee;
 }
 
-.card {
-    position: relative;
-    top: 10px;
-    margin: auto;
-    width: 70%;
-}
-
 .form-control {
     border-radius: 15px;
 }
@@ -18,4 +11,47 @@ body {
     float: right;
     border-radius: 15px;
     padding: 5px 20px;
+    clear: both;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+    top: 10px;
+    margin: auto;
+    width: 70%;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.archive-style {
+    color: #A9A9A9;
+    padding-right: 10px;
+    float: right;
+}
+
+.trash-style {
+    color: #ba0c0c;
+}
+
+.checkmark-style {
+    color: green;
+    float: right;
+    ;
+}
+
+.icon-style {
+    font-size: 20px;
+}
+
+.complete {
+    color: green
+}
+
+.due {
+    color: red;
 }
