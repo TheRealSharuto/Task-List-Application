@@ -32,20 +32,17 @@
             <div class="row">
                 <div class="col-4">
                     <div class="form-group">
-                        <input type="text" class="form-control mb-4 taskName" placeholder="Task Name">
-                        <input type="text" class="form-control assigned" placeholder="Assigned To">
+                        <input type="text" class="form-control mb-4 input-taskname" placeholder="Task Name">
+                        <input type="text" class="form-control input-assign" placeholder="Assigned To">
                     </div>
                 </div>
                 <div class="col">
-                    <textarea class="form-control taskDescription" rows="4" placeholder="Description Of Task.."></textarea>
+                    <textarea class="form-control input-description" rows="4" placeholder="Description Of Task.."></textarea>
                 </div>
                 <div class="col-4">
                     <div class="form-group flatpickr">
-                        <i class="fa-regular fa-calendar"></i>
-                        <input id="dateTime" type="datetime-local" placeholder="Select Due Date: " class="form-control mb-4 dueDate" data-input>
-
-                        <button type="submit" class="btn btn-primary shadow-lg todoButton">Add Task</button>
-                        <button type="reset" value="reset" class="btn btn-secondary shadow-lg reset-btn">Reset</button>
+                        <input id="dateTime"  placeholder="Select Due Date: " class="form-control mb-4 input-date" data-input>
+                        <button type="submit" class="btn btn-primary float-right addtask-btn">Add Task</button>
                     </div>
                 </div>
             </div>
@@ -53,10 +50,47 @@
     </div>
     <div class="container board mt-4">
         <div class="row">
-            <div class="col-4">
+            <div class="col">
                 <h4>To Do</h4>
-                <div class="todoList">
+                <div class="card border-0">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item shadow-lg mb-4 p-4 rounded">
+                            <div class="card-taskname">
+                                <h6 class="title border-bottom pb-3">Task Name</h6>
+                            </div>
+                            <div class="card-assign">
+                                <span>Assigned To</span>
+                            </div>
+                            <div class="card-description">
+                                <span>Description: </span>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, neque est minima sapiente voluptates quasi?
+                                </span>
+                            </div>
+                            <div class="card-date mt-2 mb-2">
+                                <span>Due: </span>
+                                <span class="alert">9/12/22</span>
+                            </div>
+                            <div class="card-status">
+                                <button class="trash-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                                <button class="check-btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="list-group-item shadow-lg mb-4">
+                            test
+                        </li>
+                        <li class="list-group-item shadow-lg mb-4">
+                            test
+                        </li>
+                    </ul>
                 </div>
+            </div>
+            <div class="col">
+                <h4>Done</h4>
             </div>
         </div>
     </div>
@@ -67,7 +101,7 @@
         crossorigin="anonymous"></script>
     <!-- Bootstrap 5.2v End -->
 
-    <!-- flicker datetime -->
+    <!-- flicker datetime type="datetime-local"-->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script src="assets/js/script.js"></script>

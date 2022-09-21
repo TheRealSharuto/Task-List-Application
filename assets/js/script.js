@@ -1,81 +1,72 @@
 
-// Selectors
-const taskName = document.querySelector('.taskName');
-const assigned = document.querySelector('.assigned');
-const taskDescription = document.querySelector('.taskDescription');
-const dueDate = document.querySelector('.dueDate');
-const todoButton = document.querySelector('.todoButton');
-const todoList = document.querySelector('.todoList');
+const taskname = document.querySelector('.input-taskname');
+const assign = document.querySelector('.input-assign');
+const description = document.querySelector('.input-description');
+const duedate = document.querySelector('.input-date');
+const tasklist = document.querySelector('.list-group');
+
+// button selectors
+const addtaskbtn = document.querySelector('.addtask-btn');
 
 // Event Listeners
-todoButton.addEventListener('click', addTodo);
+addtaskbtn.addEventListener('click', addTask);
 
-
-
-//function addTodo
-function addTodo(event) {
+function addTask(event) {
     event.preventDefault();
 
-    //create new todo DIV
-    const todoDiv = document.createElement('div');
-    todoDiv.classList.add('todo','container-fluid', 'shadow', 'rounded', 'p-2', 'mb-4');
-    //create new todoITEM
-    const newTodo = document.createElement('div');
-    //newTodo.innerText = 'task header';
-    newTodo.classList.add('todoItem');
-    todoDiv.appendChild(newTodo);
-    //create new task-header
-    const newTask = document.createElement('h5');
-    newTask.innerText = taskName.value;
-    newTask.classList.add('todo-header', 'text-center');
-    newTodo.appendChild(newTask);
+    // create new list item
+    const newListItem = document.createElement('li');
+    newListItem.classList.add('list-group-item', 'shadow-lg', 'mb-4', 'p-3', 'rounded');
 
-    //create new task-body / description
-    const newTaskBody = document.createElement('div');
-    newTaskBody.classList.add('todo-body');
-    newTaskBody.innerText = taskDescription.value;
-    newTodo.appendChild(newTaskBody);
+    // create all the containers for the item
+    const newTaskname = document.createElement('div'); // create new taskname div
+    const newAssign = document.createElement('div');
+    const newDescription = document.createElement('div');
+    const newDueDate = document.createElement('div');
+    const newStatus = document.createElement('div');
+    const titleOfTaskname = document.createElement('h6')
 
-    //create new assigned
-    const assignedPlaceholder = document.createElement('div');
-    assignedPlaceholder.classList.add('assignedPlaceholder')
-    assignedPlaceholder.innerText = "Assigned To: ";
-    newTodo.appendChild(assignedPlaceholder);
-    const newAssigned = document.createElement('span');
-    newAssigned.innerText = assigned.value;
-    assignedPlaceholder.appendChild(newAssigned);
 
-    //create new due date
-    const duedatePlaceholder = document.createElement('div');
-    duedatePlaceholder.classList.add('duedatePlaceholder');
-    duedatePlaceholder.innerText = "Due Date: ";
-    newTodo.appendChild(duedatePlaceholder);
-    const newDueDate = document.createElement('span');
-    newDueDate.classList.add('alert');
-    newDueDate.innerText = dueDate.value;
-    duedatePlaceholder.appendChild(newDueDate);
+    
+    // create styles for all containers
+    newTaskname.classList.add('card-taskname');
+    newAssign.classList.add('card-assign');
+    newDescription.classList.add('card-description');
+    newDueDate.classList.add('card-date', 'mt-2', 'mb-2');
+    newStatus.classList.add('card-status');
+    titleOfTaskname.classList.add('title', 'border-bottom', 'pb-4');
+    
 
-    // //create new footer
-    // const newTaskFooter = document.createElement('div');
-    // newTaskFooter.classList.add('todo-footer');
-    // newTaskFooter.innerText = 'task footer';
-    // newTodo.appendChild(newTaskFooter);
+    // grab value of all input
+    titleOfTaskname.innerText = taskname.value;
+    newAssign.innerText = assign.value;
+    newDescription.innerText = description.value;
+    // create placeholder for Due Date
+    const duedatePlaceholder = document.createElement('span');
+    duedatePlaceholder.innerText = 'Due Date: '; 
+    newDueDate.innerText = duedate.value;
 
-    //check mark button
-    const completedButton = document.createElement('button');
-    completedButton.innerHTML = '<i class="fas fa-check"></i>';
-    completedButton.classList.add('complete-btn');
-    todoDiv.appendChild(completedButton);
 
-    //check trash button
-    const trashButton = document.createElement('button');
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashButton.classList.add('trash-btn');
-    todoDiv.appendChild(trashButton);
+    // arrange in order of display
+    newListItem.appendChild(newTaskname);
+    newListItem.appendChild(newAssign);
+    newListItem.appendChild(newDescription);
+   
+    newListItem.appendChild(newDueDate);
+    
+    newListItem.appendChild(newStatus);
+    newDueDate.appendChild(duedatePlaceholder);
 
-    //append to list
-    todoList.appendChild(todoDiv);
+
+    // append list items under ul.list-group
+    newTaskname.appendChild(titleOfTaskname);
+
+
+    // append everything under tasklist
+    tasklist.appendChild(newListItem);
 }
+
+
 
 
 flatpickr("#dateTime", {});

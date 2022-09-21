@@ -3,52 +3,27 @@
 $pop: 'Poppins', sans-serif;
 $robot: 'Roboto', sans-serif;
 
-h1,h4 {font-family: $robot;}
-h1,h4 {font-weight: 800;}
-
-body {
-    background:#ccc;
-    font-family: $pop;
+*,html,body {
+    font-family:$robot;
 }
 
-.tasks {
-    background:#fff;
-}
+.alert {color:red; margin:0;padding:0;}
 
-
-.board {
-    .container-fluid {
-        background:#fff;
-    }
-    .todo-body {
-        min-height:60px;
-        word-wrap:break-word;
-    }
-    span.alert {
-        margin:0;
-        padding:0;
-        color:red;
-        font-weight: 800;
-    }
-}
-.reset-btn {
-    background:red;
+.btn,
+.form-control {
+    border-radius: 25px;
 }
 textarea {resize:none;}
-
-.flatpickr {
-    position:relative;
-    i {
-        position: absolute;
-        right:.5rem;
-        top: 4px;
-        font-size: 30px;
-        color:blue;
-    }
+.addtask-btn {
+    float:right;
+    box-shadow: 2px 2px 2px #ccc;
+    padding-right:2rem;
+    padding-left:2rem;
 }
-.assignedPlaceholder {
-    margin-top:.5rem;
+.card-date {
+    border-bottom: 1px inset #ccc;
+    padding-bottom:.5rem;
 }
-.duedatePlaceholder {
-    margin-bottom:.5rem;
+.card-status {
+    margin-top:1rem;
 }

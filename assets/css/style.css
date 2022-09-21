@@ -1,58 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,900&family=Work+Sans:wght@100&display=swap");
-h1, h4 {
+*, html, body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h4 {
-  font-weight: 800;
-}
-
-body {
-  background: #ccc;
-  font-family: "Poppins", sans-serif;
-}
-
-.tasks {
-  background: #fff;
-}
-
-.board .container-fluid {
-  background: #fff;
-}
-.board .todo-body {
-  min-height: 60px;
-  word-wrap: break-word;
-}
-.board span.alert {
+.alert {
+  color: red;
   margin: 0;
   padding: 0;
-  color: red;
-  font-weight: 800;
 }
 
-.reset-btn {
-  background: red;
+.btn,
+.form-control {
+  border-radius: 25px;
 }
 
 textarea {
   resize: none;
 }
 
-.flatpickr {
-  position: relative;
-}
-.flatpickr i {
-  position: absolute;
-  right: 0.5rem;
-  top: 4px;
-  font-size: 30px;
-  color: blue;
+.addtask-btn {
+  float: right;
+  box-shadow: 2px 2px 2px #ccc;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
-.assignedPlaceholder {
-  margin-top: 0.5rem;
+.card-date {
+  border-bottom: 1px inset #ccc;
+  padding-bottom: 0.5rem;
 }
 
-.duedatePlaceholder {
-  margin-bottom: 0.5rem;
+.card-status {
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
