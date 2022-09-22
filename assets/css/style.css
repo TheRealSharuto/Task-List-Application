@@ -1,9 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,900&family=Work+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
 *, html, body {
   font-family: "Roboto", sans-serif;
 }
 
 .alert {
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+.success {
   color: red;
   margin: 0;
   padding: 0;
@@ -25,11 +31,60 @@ textarea {
   padding-left: 2rem;
 }
 
-.card-date {
-  border-bottom: 1px inset #ccc;
-  padding-bottom: 0.5rem;
+.tasklist,
+.completed {
+  transition: all 0.5s ease-in-out;
 }
 
-.card-status {
-  margin-top: 1rem;
+ul.list-group {
+  transition: all 0.5s ease-in-out;
+}
+ul.list-group h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+ul.list-group .list-group-item {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+ul.list-group .list-group-item .check-btn,
+ul.list-group .list-group-item .trash-btn {
+  background: none;
+  border-radius: 3px;
+  padding: 0.5rem 2rem;
+}
+ul.list-group .list-group-item .check-btn i,
+ul.list-group .list-group-item .trash-btn i {
+  pointer-events: none;
+}
+ul.list-group .list-group-item .check-btn {
+  color: green;
+  border: 1px solid green;
+}
+ul.list-group .list-group-item .trash-btn {
+  color: red;
+  border: 1px solid red;
+  margin-right: 10px;
+}
+ul.list-group .list-group-item .card-assign {
+  font-size: 14px;
+}
+ul.list-group .list-group-item .card-description {
+  padding: 1rem 0;
+}
+ul.list-group .list-group-item .card-date {
+  padding-bottom: 0.5rem;
+}
+ul.list-group .list-group-item .card-status {
+  margin-top: 0.5rem;
+}
+
+.vanish {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.appear {
+  opacity: 100;
 }/*# sourceMappingURL=style.css.map */

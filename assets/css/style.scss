@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,900&family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
 
 $pop: 'Poppins', sans-serif;
 $robot: 'Roboto', sans-serif;
@@ -8,6 +8,7 @@ $robot: 'Roboto', sans-serif;
 }
 
 .alert {color:red; margin:0;padding:0;}
+.success {color:red; margin:0;padding:0;}
 
 .btn,
 .form-control {
@@ -20,10 +21,42 @@ textarea {resize:none;}
     padding-right:2rem;
     padding-left:2rem;
 }
-.card-date {
-    border-bottom: 1px inset #ccc;
-    padding-bottom:.5rem;
+
+
+.tasklist,
+.completed {
+    transition: all .5s ease-in-out;
 }
-.card-status {
-    margin-top:1rem;
+
+ul.list-group {
+    h6 {margin:0;padding:0; font-weight: 700;}
+    transition: all .5s ease-in-out;
+    .list-group-item {
+        padding:2rem;
+        margin-bottom:2rem;
+        
+        .check-btn,
+        .trash-btn {
+            background:none;
+            border-radius: 3px;
+            padding:.5rem 2rem;
+            i {pointer-events:none;}
+        }
+        .check-btn {color:green; border:1px solid green;}
+        .trash-btn {color:red; border:1px solid red; margin-right:10px;}
+        .card-assign {
+            font-size:14px;
+        }
+        .card-description {
+            padding: 1rem 0;
+        }
+        .card-date {
+            padding-bottom:.5rem;
+        }
+        .card-status {
+            margin-top:.5rem;
+        }
+    }
 }
+.vanish {opacity:0; transition: all .5s ease-in-out;}
+.appear {opacity: 100;}
