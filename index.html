@@ -20,6 +20,14 @@
     <!-- My Styles and Scripts -->
     <link rel="stylesheet" href="assets/css/style.css">
     
+    <script>
+        window.addEventListener('click', (e) => {
+            const item = e.target;
+            if (item.classList.contains('text-duedate')) {
+                item.remove();
+            }
+        })
+    </script>
 
     
 </head>

@@ -19,8 +19,6 @@ tasklist.addEventListener('click', statusCheck);
 function addTask(e) {
     e.preventDefault();
 
-    const item = e.target;
-
     // create new list item
     const newListItem = document.createElement('li');
     newListItem.classList.add('list-group-item', 'shadow-lg', 'rounded');
@@ -90,10 +88,6 @@ function addTask(e) {
     assign.value = "";
     description.value = "";
     duedate.value = "";
-
-    if (item.classList[0] === 'completed') {
-        cardstatus.remove();
-    }
 }
 
 function statusCheck(e) {
