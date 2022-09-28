@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@500;700;900&display=swap');
+$open: 'Open Sans', sans-serif;
+
+
+$light-bg: #fafafa;
+
+
+
+.container {
+    margin-top:2rem;
+    max-width:960px;
+}
+header {
+    .container {
+        background: #ccc;
+        .calendar-header,
+        .calendar-body {
+            padding: 2rem;
+        }
+        .calendar-body {
+            .clock {
+                text-align:center;
+                //background:#333;
+                border-radius: 1rem;
+                font-family: $open;
+                font-weight: 900;
+                text-align:left;
+                .currentTime {
+                    font-family: sans-serif;
+                    font-size: 40px;
+                    letter-spacing: 2px;
+                    color:#333;
+                    color:#fff;
+                }
+            }
+        }
+        .calendar-footer {
+            text-align:center;
+            .col {
+                padding: 1rem 0;
+                border: 1px dotted #fff;
+                transition:all .5s ease;
+                > div {
+                    font-size: 20px;
+                }
+
+            }
+            .col:hover,
+            .active-day {
+                background: #eee;
+                border-top:2px solid purple;
+                box-shadow: 4px 4px 4px #ccc;
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// .ui-calendar-wrapper {
+//     //min-height: 40vh;
+//     background: #ccc;
+//     //border-bottom: 2px solid #444;
+
+//     .calendar-heading {
+//         min-height:35vh;
+//         .wrapper {
+//             padding: 4rem;
+//         }
+//         .btn-add-task {
+//             border-radius: 100%;
+//             font-size: 30px;
+//             float:right;
+//         }
+//         .btn-add-task:after {
+//             content:'';
+//             clear:both;
+//         }
+//     }
+//     .calendar-footer {
+//         background:$light-bg;
+//         .col {
+//             border:1px dotted #ccc; 
+//             padding: 1rem 0; 
+//             transition: .5s; cursor:pointer;
+//         }
+//         .col .row {text-align:center;}
+//         .col:hover,
+//         .active-day {
+//             background: #eee;
+//             border-top:2px solid blue;
+//             box-shadow: 4px 4px 4px #ccc;
+//         }
+//     }
+// }
+// .taskslist {
+//     margin-top:2rem;
+
+//     .list-group-item {
+//         padding: 2rem;
+//         margin-bottom:2rem;
+//         .complete-check {text-align:center;}
+//     }
+//     .add-task-form {
+//         .col .row {margin-bottom:1rem;}
+//         a.add-new-task {
+//             display: inline-block;
+//             text-decoration: none;
+//             padding: .5rem 1rem;
+//             border:1px solid blue;
+//             margin-left:-10px;
+//         }
+//     }
+// }
+
+// .alert {color:red; font-weight:700; margin:0;padding:0;}
+// .success {color:green; font-weight: 700;}
+// .list-date {margin:0;padding:0;}
+// .col-2 h5 {margin:0;padding:0;}
+// .task-count {font-size: 25px;}

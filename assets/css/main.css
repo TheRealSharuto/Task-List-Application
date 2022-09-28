@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@500;700;900&display=swap");
+.container {
+  margin-top: 2rem;
+  max-width: 960px;
+}
+
+header .container {
+  background: #ccc;
+}
+header .container .calendar-header,
+header .container .calendar-body {
+  padding: 2rem;
+}
+header .container .calendar-body .clock {
+  text-align: center;
+  border-radius: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  text-align: left;
+}
+header .container .calendar-body .clock .currentTime {
+  font-family: sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #333;
+  color: #fff;
+}
+header .container .calendar-footer {
+  text-align: center;
+}
+header .container .calendar-footer .col {
+  padding: 1rem 0;
+  border: 1px dotted #fff;
+  transition: all 0.5s ease;
+}
+header .container .calendar-footer .col > div {
+  font-size: 20px;
+}
+header .container .calendar-footer .col:hover,
+header .container .calendar-footer .active-day {
+  background: #eee;
+  border-top: 2px solid purple;
+  box-shadow: 4px 4px 4px #ccc;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

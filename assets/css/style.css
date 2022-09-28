@@ -1,90 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
-*, html, body {
-  font-family: "Roboto", sans-serif;
+.container {
+  max-width: 960px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header .container {
+  padding: 2rem;
+}
+
+#add-task-form .form-group .form-control {
+  margin-top: 1rem;
+}
+#add-task-form .form-control {
+  border-radius: 25px;
+  margin-bottom: 1rem;
+}
+#add-task-form textarea {
+  resize: none;
+  height: 100%;
+}
+#add-task-form .btn-add-task {
+  border-radius: 25px;
+  float: right;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 3px 3px 3px #ccc;
+}
+#add-task-form input, #add-task-form textarea {
+  text-align: center;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+#tasklist {
+  margin-top: 1rem;
+}
+#tasklist .tasklist-item {
+  margin-bottom: 1rem;
+}
+#tasklist .tasklist-item .card,
+#tasklist .tasklist-item .card-header,
+#tasklist .tasklist-item .card-footer,
+#tasklist .tasklist-item .card-body {
+  border: none;
+  background: none;
+}
+#tasklist .tasklist-item .card-date {
+  margin-top: 1rem;
+}
+#tasklist .tasklist-item .card-body {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#tasklist .tasklist-item .card-footer {
+  margin-top: 1rem;
+  background: #eee;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+}
+#tasklist .tasklist-item .card-status button {
+  border: none;
+  background: none;
+}
+#tasklist .tasklist-item .card-status .alert,
+#tasklist .tasklist-item .card-status .fa-trash {
+  color: red;
+}
+#tasklist .tasklist-item .card-status .success,
+#tasklist .tasklist-item .card-status .fa-check {
+  color: green;
+}
+#tasklist .tasklist-item .title {
+  font-weight: 600;
+}
+#tasklist .tasklist-item .sub {
+  font-weight: 500;
+  color: #444;
 }
 
 .alert {
   color: red;
-  margin: 0;
-  padding: 0;
-}
-
-.success {
-  color: red;
-  margin: 0;
-  padding: 0;
-}
-
-.btn,
-.form-control {
-  border-radius: 25px;
-}
-
-textarea {
-  resize: none;
-}
-
-.addtask-btn {
-  float: right;
-  box-shadow: 2px 2px 2px #ccc;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.tasklist,
-.completed {
-  transition: all 0.5s ease-in-out;
-}
-
-ul.list-group {
-  transition: all 0.5s ease-in-out;
-}
-ul.list-group h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-}
-ul.list-group .list-group-item {
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-ul.list-group .list-group-item .check-btn,
-ul.list-group .list-group-item .trash-btn {
-  background: none;
-  border-radius: 3px;
-  padding: 0.5rem 2rem;
-}
-ul.list-group .list-group-item .check-btn i,
-ul.list-group .list-group-item .trash-btn i {
-  pointer-events: none;
-}
-ul.list-group .list-group-item .check-btn {
-  color: green;
-  border: 1px solid green;
-}
-ul.list-group .list-group-item .trash-btn {
-  color: red;
-  border: 1px solid red;
-  margin-right: 10px;
-}
-ul.list-group .list-group-item .card-assign {
-  font-size: 14px;
-}
-ul.list-group .list-group-item .card-description {
-  padding: 1rem 0;
-}
-ul.list-group .list-group-item .card-date {
-  padding-bottom: 0.5rem;
-}
-ul.list-group .list-group-item .card-status {
-  margin-top: 0.5rem;
-}
-
-.vanish {
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.appear {
-  opacity: 100;
+  margin-left: -1rem;
 }/*# sourceMappingURL=style.css.map */

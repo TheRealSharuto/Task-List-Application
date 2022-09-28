@@ -19,115 +19,176 @@
 
     <!-- My Styles and Scripts -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     
-    <script>
-        window.addEventListener('click', (e) => {
-            const item = e.target;
-            if (item.classList.contains('text-duedate')) {
-                item.remove();
-            }
-        })
-    </script>
+    <script defer src="assets/js/app.js"></script>
 
     
 </head>
 
 <body>
 
-    <div class="container tasks rounded p-4 mt-4 shadow-lg">
-        <h1 class="text-center">Tasks</h1>
-        <form action="">
-            <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <input type="text" class="form-control mb-4 input-taskname" placeholder="Task Name">
-                        <input type="text" class="form-control input-assign" placeholder="Assigned To">
+    <header>
+        <div class="container rounded">
+            <h1>Task Manager</h1>
+            <form action="" id="add-task-form">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-task" placeholder="Task Name">
+                            <input type="text" class="form-control input-assign" placeholder="Assigned To">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <textarea name="desc" class="form-control input-desc" placeholder="Description"></textarea>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-date" placeholder="Due Date:">
+                            <a href="#" role="button" class="btn btn-primary btn-add-task">Add Task</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <textarea class="form-control input-description" rows="4" placeholder="Description Of Task.."></textarea>
-                </div>
-                <div class="col-4">
-                    <div class="form-group flatpickr">
-                        <input id="dateTime"  placeholder="Select Due Date: " class="form-control mb-4 input-date" data-input>
-
-
-                        <button type="submit" class="btn btn-primary float-right addtask-btn">Add Task</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="container board mt-4">
-        <div class="row">
-            <div class="col">
-                <h4>To Do</h4>
-                <div class="card border-0">
-                    <ul class="list-group list-group-flush tasklist">
-                        <li class="list-group-item shadow-lg rounded">
-                            <div class="card-taskname">
-                                <h6 class="title">Task Name</h6>
-                            </div>
-                            <div class="card-assign text-muted">
-                                <span>Assigned To</span>
-                            </div>
-                            <div class="card-description">
-                                <span>Description: </span>
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, neque est minima sapiente voluptates quasi?
-                                </span>
-                            </div>
-                            <div class="card-date">
-                                <span>Due: </span>
-                                <span class="alert">9/12/22</span>
-                            </div>
-                            <div class="card-status">
-                                <button class="trash-btn">
-                                    <i class="fa-solid fa-trash fa-fw"></i>
-                                </button>
-                                <button class="check-btn">
-                                    <i class="fa-solid fa-check fa-fw"></i>
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <h4>Done</h4>
-                <div class="card border-0">
-                    <ul class="list-group list-group-flush completed">
-                        <li class="list-group-item shadow-lg rounded complete">
-                            <div class="card-taskname">
-                                <h6 class="title">Task Name</h6>
-                            </div>
-                            <div class="card-assign text-muted">
-                                <span>Assigned To</span>
-                            </div>
-                            <div class="card-description">
-                                <span>Description: </span>
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, neque est minima sapiente voluptates quasi?
-                                </span>
-                            </div>
-                            <div class="card-date">
-                                <span>Due: </span>
-                                <span class="alert">9/12/22</span>
-                            </div>
-                            <div class="card-status">
-                                <button class="trash-btn">
-                                    <i class="fa-solid fa-trash fa-fw"></i>
-                                </button>
-                                <button class="check-btn">
-                                    <i class="fa-solid fa-check fa-fw"></i>
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </form>
         </div>
-    </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>To do(3)</h3>
+                        <ul class="list-group list-group-flush" id="tasklist">
+                            <li class="list-group-item tasklist-item shadow-lg rounded">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="title">Task Name</h5>
+                                        <h6 class="sub">Assigned To: <span>Name</span></h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <span>Description:</span>
+                                        <span class="desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odio nesciunt voluptates corporis? Perferendis provident eos quam? Id reprehenderit voluptatem nostrum, voluptatibus earum impedit perspiciatis?
+                                        </span>
+                                        <div class="card-date">
+                                            <span class="due">Due:</span>
+                                            <span class="alert">9/12/22</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-status">
+                                            <button class="trash-btn">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                            <button class="check-button">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item tasklist-item shadow-lg rounded">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="title">Task Name</h5>
+                                        <h6 class="sub">Assigned To: <span>Name</span></h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <span>Description:</span>
+                                        <span class="desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odio nesciunt voluptates corporis? Perferendis provident eos quam? Id reprehenderit voluptatem nostrum, voluptatibus earum impedit perspiciatis?
+                                        </span>
+                                        <div class="card-date">
+                                            <span class="due">Due:</span>
+                                            <span class="alert">9/12/22</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-status">
+                                            <button class="trash-btn">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                            <button class="check-button">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Done (3)</h3>
+                        <ul class="list-group list-group-flush" id="tasklist">
+                            <li class="list-group-item tasklist-item shadow-lg rounded">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="title">Task Name</h5>
+                                        <h6 class="sub">Assigned To: <span>Name</span></h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <span>Description:</span>
+                                        <span class="desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odio nesciunt voluptates corporis? Perferendis provident eos quam? Id reprehenderit voluptatem nostrum, voluptatibus earum impedit perspiciatis?
+                                        </span>
+                                        <div class="card-date">
+                                            <span class="due">Due:</span>
+                                            <span class="alert">9/12/22</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-status">
+                                            <button class="trash-btn">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                            <button class="check-button">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item tasklist-item shadow-lg rounded">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="title">Task Name</h5>
+                                        <h6 class="sub">Assigned To: <span>Name</span></h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <span>Description:</span>
+                                        <span class="desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odio nesciunt voluptates corporis? Perferendis provident eos quam? Id reprehenderit voluptatem nostrum, voluptatibus earum impedit perspiciatis?
+                                        </span>
+                                        <div class="card-date">
+                                            <span class="due">Due:</span>
+                                            <span class="alert">9/12/22</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-status">
+                                            <button class="trash-btn">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                            <button class="check-button">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 
     <!-- JavaScript Bundle with Popper Bootstrap 5.2v -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -138,7 +199,6 @@
     <!-- flicker datetime type="datetime-local"-->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-    <script src="assets/js/script.js"></script>
 
 
 
