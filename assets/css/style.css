@@ -55,3 +55,9 @@
 .due {
     color: red;
 }
+
+.error {
+    height: 2px;
+    font-size: 10px;
+    visibility: hidden;
+}
