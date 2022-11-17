@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5.2v -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="fonts googleapis" href="https://fonts.googleapis.com/css?family=Merriweather">
+        <link rel="stylesheet" href="https://"path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">       
+    <!-- Bootstrap End -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script defer src="script.js"></script>
+        <link rel=""
+</head>
+
+<body
+<section class="container">
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center ">Task Manager</h5>
+    <form id="form">
+        <div class="row align-items-center">
+        <div class="col">
+        <div class="mb-3">
+            <div class="inputQuery">
+    <label for="name">Task Name<span> (required)</span></label>
+        <input type="text" class="form-control" id="name" name="task-name"
+            placeholder="Task Name">
+    <div class="alert alert-danger d-flex align-items-center show-alert error"
+        role="alert" id="taskNameAlert">
+        <svg class="bi flex-shrink-0 me-2" width="10" height="10" role="img"
+    aria-label="Danger:">
+            <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+    <div class="alert-message">
+            Error
+    </div>
+         </div>
+             </div>
+                    </div>
+    <div class="mb-3">
+               <div class="inputQuery">
+       <label for="assign">Assigned To<span> (required)</span></label>
+    <input type="text" class="form-control" id="assign" name="task-assignee"
+                placeholder="Assigned To">
+         <div class="alert alert-danger d-flex align-items-center show-alert error"
+              role="alert" id="assignAlert">
+          <svg class="bi flex-shrink-0 me-2" width="10" height="10" role="img"
+            aria-label="Danger:">
+          <use xlink:href="#exclamation-triangle-fill" />
+             </svg>
+             <div class="alert-message">
+                   Error
+          </div>
+               </div>
+                     </div>
+                    </div>
+                </div>
+                <div class="col">
+               <div class="mb-3">
+            <label for="assign">Task Description<span> (optional)</span></label>
+         <textarea class="form-control" id="description" name="task-description" rows="3"
+         placeholder="Description"></textarea>
+             </div>
+                </div>
+         <div class="col">
+             <div class="mb-3">
+         <div class="inputQuery">
+                <label for="due-date">Due Date<span> (required)</span></label>
+              <input type="date" class="form-control" name="task-due-date" id="due-date">
+      <div class="alert alert-danger d-flex align-items-center show-alert error"
+            role="alert" id="dueDateAlert">
+        <svg class="bi flex-shrink-0 me-2" width="10" height="10" role="img"
+                    aria-label="Danger:">
+                     <use xlink:href="#exclamation-triangle-fill" />
+             </svg>
+             <div class="alert-message">
+                    Error
+              </div>
+               </div>
+                        </div>
+                    </div>
+              <button type="submit" name="task-submission" class="btn btn-primary shadow">Add
+                        Task</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+
+   <div>
+      <h1 style="text-align:left;float:left">To Do</h1>
+      <h1 style="text-align:right;float:right">Done</h1>
+      <hr style="clear:both;"/>
+</div>
+<section>
+<div class="card" id="card" style="width: 18rem;">
+  <div class="card-body">
+        <h5 class="card-title">Task Name</h5>
+        <h6 class="card-description mb-2 text-muted">Description</h6>
+        <h6 class="card-assigned">Assigned</h6>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary">Check</button>
+      <button data-delete-button type="button" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</section>
+<section>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Task Name</h5>
+            <h6 class="card-description mb-2 text-muted">Description</h6>
+            <h6 class="card-assigned">Assigned</h6>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Check</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Task Name</h5>
+            <h6 class="card-description mb-2 text-muted">Description</h6>
+            <h6 class="card-assigned">Assigned</h6>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">Check</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+          </div>
+   </div>
+  </section>
+        </div>
+      </div>
+    </div>
+   
+  
+</div>
+</section>
+    <!-- JavaScript Bundle with Popper Bootstrap 5.2v -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap 5.2v End -->
+</body>
+
+</body>
+
+</html>
